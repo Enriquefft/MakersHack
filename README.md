@@ -1,0 +1,2 @@
+# MakersHack
+Makers mini-hackathon
