@@ -9,12 +9,13 @@ import {
 } from "@chatscope/chat-ui-kit-react";
 import { useState } from "react";
 import type { ChatCompletionMessageParam } from "openai/resources/index.mjs";
+import { env } from "@/env.mjs";
 
 import { chat } from "@/lib/openai";
 
 export default function Chat() {
   const [messages, setMessages] = useState<ChatCompletionMessageParam[]>([
-    { role: "system", content: "Hello! How can I assist you today?" },
+    { role: "system", content: env.NEXT_PUBLIC_CHAT_SYSTEM_MESSAGE },
   ]);
   const [isTyping, setIsTyping] = useState(false);
 
@@ -53,11 +54,19 @@ export default function Chat() {
             }
           >
             {messages.map((message, i) => (
-              <Message key={i}>
-                {message.content instanceof Array
-                  ? message.content.join(" ")
-                  : message.content}
-              </Message>
+              <Message
+                key={i}
+                model={{
+                  message:
+                    message.content instanceof Array
+                      ? message.content.join(" ")
+                      : message.content ?? "",
+                  sentTime: "just now",
+                  sender: "Joe",
+                  direction: i % 2 === 0 ? "incoming" : "outgoing",
+                  position: "single",
+                }}
+              />
             ))}
           </MessageList>
           <MessageInput
