@@ -1,0 +1,16 @@
+export const sentences = [
+  "The quick brown fox jumps over the lazy dog.",
+  "Pack my box with five dozen liquor jugs.",
+  "How vexingly quick daft zebras jump!",
+  "Bright vixens jump; dozy fowl quack.",
+  "Jinxed wizards pluck ivy from the big quilt.",
+  "Bright jovial zebras play in the vibrant sun.",
+  "The five boxing wizards jump quickly.",
+  "Quick zephyrs blow, vexing daft Jim.",
+  "Sphinx of black quartz, judge my vow.",
+  "Jumping wizards fly overhead.",
+  "How quickly daft jumping zebras vex.",
+  "Bright vixens leap; dozy fowl quack.",
+  "Quick zephyrs blow; vexing daft Jim quickly disposes of his quaint apparatus.",
+  "Sphinx of black quartz, judge my vow.",
+] as const;
