@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --primary-color: 34, 139, 34; /* Tonalidad verde principal */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,8 +27,13 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+/* Nuevo estilo verde */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  
+  .text-green {
+    color: rgb(var(--primary-color));
   }
 }

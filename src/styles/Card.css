@@ -1,11 +1,12 @@
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 32px; 
+  justify-content: center;
+  border: 1px solid #4CAF50; 
+  border-radius: 12px; 
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3); 
+  background-color: #E8F5E9; 
+  padding: 32px;
   margin: 16px;
   width: 400px;
   height: 300px;
@@ -13,4 +14,5 @@
 
 .card-content {
   text-align: center;
+  color: #2E7D32; 
 }
