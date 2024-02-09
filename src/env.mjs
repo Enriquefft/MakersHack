@@ -7,8 +7,12 @@ export const env = createEnv({
   server: {
     OPENAI_API_KEY: z.string(),
   },
-  client: {},
+  client: {
+    NEXT_PUBLIC_CHAT_SYSTEM_MESSAGE: z.string(),
+  },
   runtimeEnv: {
     OPENAI_API_KEY: process.env.OPENAI_API_KEY,
+    NEXT_PUBLIC_CHAT_SYSTEM_MESSAGE:
+      process.env.NEXT_PUBLIC_CHAT_SYSTEM_MESSAGE,
   },
 });
