@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState, forwardRef } from "react";
+// @ts-ignore
 import recorder from "node-record-lpcm16";
 import { AssemblyAI } from "assemblyai";
 
@@ -29,7 +30,7 @@ const TranscriptionService = forwardRef((props, ref) => {
         sampleRate: 16_000,
         audioType: "wav",
       });
-
+      // @ts-ignore
       recordingRef.current.stream().pipeTo(transcriber.stream());
     };
 
@@ -37,6 +38,7 @@ const TranscriptionService = forwardRef((props, ref) => {
 
     return () => {
       if (recordingRef.current) {
+        // @ts-ignore
         recordingRef.current.stop();
       }
       transcriber.close();
